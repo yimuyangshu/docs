@@ -9,7 +9,11 @@ docker cp D:/tmp/redis  b68:/usr/src/php/ext  # 将扩展手动上传到容器�
 docker-php-ext-install redis
 ```
 
-!> 每次启动时都需要手动在容器内执行 `nginx` 启动服务
+::: warning 提醒
+每次启动时都需要手动在容器内执行 `nginx` 启动服务
+:::
+
+
 ## 通过自定义镜像部署项目
 ```shell
 # 将项目文件夹映射到 /var/www/html 文件中

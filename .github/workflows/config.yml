@@ -32,3 +32,11 @@ jobs:
         with:
           folder: ./docs/.vitepress/dist
           branch: docs
+
+
+      - name: Set up remote repository
+        run: git remote add yimuyangshu git@github.com:yimuyangshu/yimuyangshu.git
+
+      - name: Push to remote repository
+        run: |
+          git subtree push --prefix docs/.vitepress/dist yimuyangshu master
