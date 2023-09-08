@@ -14,10 +14,16 @@ export default defineConfig({
     },
     sidebar: [
       {
-        text: 'PHP',
+        text: 'Docker',
         items: [
           { text: 'Docker 常用', link: '/Docker/docker' },
           { text: 'Docker 扩展', link: '/Docker/docker-ext' }
+        ]
+      },
+      {
+        text: 'System',
+        items:[
+          {text: 'Git',link: '/Shell/Git.md'}
         ]
       }
     ],
