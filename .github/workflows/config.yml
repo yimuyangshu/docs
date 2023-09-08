@@ -24,4 +24,9 @@ jobs:
       - name: Build docs
         run: npm run docs:build
 
-
+      - name: Deploy to docs branch
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/.vitepress/dist
+          publish_branch: docs
