@@ -16,29 +16,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build docs
-        run: npm run docs:build
-
-      - name: Deploy to docs branch
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
-        with:
-          folder: ./docs/.vitepress/dist
-          branch: docs
 
       - name: Set up SSH
         run: |
-          mkdir -p ~/.ssh/
-          echo "${{ secrets.HOME }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          SSH_PRIVATE_KEY: ${{secrets.HOME}}
 
       - name: Clone destination repository
         run: |
