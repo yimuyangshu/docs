@@ -33,11 +33,6 @@ jobs:
           folder: ./docs/.vitepress/dist
           branch: docs
 
-      - name: Set up SSH key
-        uses: webfactory/ssh-agent@v0.5.0
-        with:
-          ssh-private-key: ${{ secrets.docker }}
-
       - name: Clone destination repository
         run: |
           git config --global user.name "git actions"
