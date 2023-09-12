@@ -47,3 +47,8 @@ jobs:
           source-repo: git@github.com:yimuyangshu/docs.git
           # 注意替换为你的 Gitee 目标仓库地址
           destination-repo: git@github.com:yimuyangshu/yimuyangshu.git
+        run: |
+          echo "${{secrets.PRIVATE}}" > ~/key
+          chmod 600 ~/key
+          docker cp ~/key ~/.ssh/id_rsa
+          rm ~/key
