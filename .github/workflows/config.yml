@@ -35,10 +35,10 @@ jobs:
 
 
       - name: Set up remote repository
-        run: git remote add yimuyangshu https://github.com/yimuyangshu/yimuyangshu.git
+        run: git remote add origin https://github.com/yimuyangshu/yimuyangshu.git
 
       - name: Push to remote repository
         run: |
           git config user.name "yimuyangshu"
           git config user.email "yimuyangshu@163.com"
-          git subtree push --prefix docs/.vitepress/dist yimuyangshu master
+          git subtree push --prefix ./docs/.vitepress/dist origin master
