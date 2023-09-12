@@ -38,7 +38,7 @@ jobs:
           git config --global user.name "git actions"
           git config --global user.email "yimuyangshu@163.com"
           git clone https://github.com/yimuyangshu/yimuyangshu.git
-          cp -a ./docs/.vitepress/dist/ ./yimuyangshu/
+          cp -r ./docs/.vitepress/dist/ ./yimuyangshu/
           cd yimuyangshu
           git add .
           git commit -m "Update docs"
