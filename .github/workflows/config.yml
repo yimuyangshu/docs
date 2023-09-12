@@ -35,7 +35,7 @@ jobs:
 
 
       - name: Set up remote repository
-        run: git remote add yimuyangshu git@github.com:yimuyangshu/yimuyangshu.git
+        run: git remote add yimuyangshu https://github.com/yimuyangshu/yimuyangshu.git
 
       - name: Push to remote repository
         run: |
