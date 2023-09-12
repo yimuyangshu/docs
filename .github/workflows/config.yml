@@ -17,7 +17,6 @@ jobs:
 
 
       - name: Set up SSH
-        uses: wearerequired/git-mirror-action@master  
         env: 
           SSH_PRIVATE_KEY: ${{secrets.HOME}}
 
