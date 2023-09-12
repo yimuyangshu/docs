@@ -42,7 +42,8 @@ jobs:
           echo "${{secrets.HOME}}" > ~/.ssh/id_rsa
           chmod 600 *
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-          chmod -R 777 ./
+          chmod -R 777 ./docs/.vitepress/dist
+          
       - name: Clone destination repository
         run: |
           git config --global user.email "yimuyangshu@163.com"
