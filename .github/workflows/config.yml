@@ -33,6 +33,13 @@ jobs:
           folder: ./docs/.vitepress/dist
           branch: docs
 
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.HOME }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
       - name: Clone destination repository
         run: |
           git config --global user.email "yimuyangshu@163.com"
