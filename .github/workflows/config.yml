@@ -35,15 +35,14 @@ jobs:
 
       - name: Clone destination repository
         run: |
-          git config --global user.name "yimuyangshu"
+          git config --global user.name "git actions"
           git config --global user.email "yimuyangshu@163.com"
           git clone https://github.com/yimuyangshu/yimuyangshu.git
           cd yimuyangshu
-          git checkout master
           cd ..
 
       - name: Copy dist files to destination repository
-        run: cp -a dist/. yimuyangshu/
+        run: cp -a ./docs/.vitepress/dist/ ./yimuyangshu/
 
       - name: Commit and push changes to destination repository
         run: |
