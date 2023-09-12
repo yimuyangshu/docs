@@ -18,7 +18,8 @@ jobs:
 
 
       - name: Set up SSH
-        run: |
+        uses: wearerequired/git-mirror-action@master  
+        env: 
           SSH_PRIVATE_KEY: ${{secrets.HOME}}
 
       - name: Clone destination repository
