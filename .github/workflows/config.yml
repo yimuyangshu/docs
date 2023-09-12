@@ -47,7 +47,7 @@ jobs:
         run: |
           git config --global user.email "yimuyangshu@163.com"
           git config --global user.name "yimu"
-          cd docs/.vitepress/dist
+          cd ./docs/.vitepress/dist
           git init
           git add .
           git commit -m "Initial commit"
