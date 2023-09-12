@@ -35,11 +35,9 @@ jobs:
 
       - name: Clone destination repository
         run: |
-          git config --global user.name "git actions"
-          git config --global user.email "yimuyangshu@163.com"
-          git clone https://github.com/yimuyangshu/yimuyangshu.git
-          cp -r ./docs/.vitepress/dist/ ./yimuyangshu/
-          cd yimuyangshu
+          cd docs/.vitepress/dist
+          git init
           git add .
-          git commit -m "Update docs"
+          git commit -m "Initial commit"
+          git remote add origin git@github.com:yimuyangshu/yimuyangshu.git
           git push origin master
