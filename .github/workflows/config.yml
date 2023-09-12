@@ -43,8 +43,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.HOME }}
         with:
           # 注意替换为你的 GitHub 源仓库地址
+          args: --source-ref=docs --destination-ref=master
           source-repo: git@github.com:yimuyangshu/docs.git
-          source-ref: docs
           # 注意替换为你的 Gitee 目标仓库地址
           destination-repo: git@github.com:yimuyangshu/yimuyangshu.git
-          destination-ref: master
