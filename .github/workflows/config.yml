@@ -60,6 +60,7 @@ jobs:
           git config --global user.email "yimuyangshu@163.com"
           git config --global user.name "yimu"
           git checkout docs
-          git checkout -b main
           git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.git
+          git pull b-origin main
+          git merge docs
           git push b-origin main
