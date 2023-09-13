@@ -66,4 +66,4 @@ jobs:
           git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.git
           git pull b-origin master
 
-          git push b-origin HEAD:master
+          git push b-origin master
