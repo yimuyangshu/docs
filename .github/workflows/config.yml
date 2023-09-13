@@ -61,8 +61,10 @@ jobs:
           git config --global user.email "yimuyangshu@163.com"
           git config --global user.name "yimu"
           git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.git
+          git pull
           git fetch b-origin master
+          git checkout origin docs
           git add .
           git commit -m '测试'
           git merge -X ours b-origin/master --allow-unrelated-histories
-          git push -f b-origin docs:master
+          git push b-origim master
