@@ -72,7 +72,19 @@ import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.ca65985f.js";const h=
 <span class="line"><span style="color:#E1E4E8;">          </span><span style="color:#85E89D;">args</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">--source-ref=refs/heads/docs --destination-ref=refs/heads/master</span></span>
 <span class="line"><span style="color:#E1E4E8;">          </span><span style="color:#85E89D;">source-repo</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">git@github.com:yimuyangshu/docs.git</span></span>
 <span class="line"><span style="color:#E1E4E8;">          </span><span style="color:#6A737D;"># 注意替换为你的 Gitee 目标仓库地址</span></span>
-<span class="line"><span style="color:#E1E4E8;">          </span><span style="color:#85E89D;">destination-repo</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">git@github.com:yimuyangshu/yimuyangshu.git</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#22863A;">name</span><span style="color:#24292E;">: </span><span style="color:#032F62;">Build and Deploy Docs</span></span>
+<span class="line"><span style="color:#E1E4E8;">          </span><span style="color:#85E89D;">destination-repo</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">git@github.com:yimuyangshu/yimuyangshu.git</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#85E89D;">name</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">设置访问秘钥</span></span>
+<span class="line"><span style="color:#E1E4E8;">        </span><span style="color:#85E89D;">run</span><span style="color:#E1E4E8;">: </span><span style="color:#F97583;">|</span></span>
+<span class="line"><span style="color:#9ECBFF;">          mkdir -p ~/.ssh/</span></span>
+<span class="line"><span style="color:#9ECBFF;">          echo &quot;\${{ secrets.PRIVATE }}&quot; &gt; ~/.ssh/id_rsa</span></span>
+<span class="line"><span style="color:#9ECBFF;">          chmod 600 ~/.ssh/id_rsa</span></span>
+<span class="line"><span style="color:#9ECBFF;">          ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#85E89D;">name</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">推送到另一个仓库,并删除master</span></span>
+<span class="line"><span style="color:#E1E4E8;">        </span><span style="color:#85E89D;">run</span><span style="color:#E1E4E8;">: </span><span style="color:#F97583;">|</span></span>
+<span class="line"><span style="color:#9ECBFF;">          git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.git</span></span>
+<span class="line"><span style="color:#9ECBFF;">          git push b-origin --delete master</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#22863A;">name</span><span style="color:#24292E;">: </span><span style="color:#032F62;">Build and Deploy Docs</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#005CC5;">on</span><span style="color:#24292E;">:</span></span>
 <span class="line"><span style="color:#24292E;">  </span><span style="color:#22863A;">push</span><span style="color:#24292E;">:</span></span>
@@ -120,4 +132,16 @@ import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.ca65985f.js";const h=
 <span class="line"><span style="color:#24292E;">          </span><span style="color:#22863A;">args</span><span style="color:#24292E;">: </span><span style="color:#032F62;">--source-ref=refs/heads/docs --destination-ref=refs/heads/master</span></span>
 <span class="line"><span style="color:#24292E;">          </span><span style="color:#22863A;">source-repo</span><span style="color:#24292E;">: </span><span style="color:#032F62;">git@github.com:yimuyangshu/docs.git</span></span>
 <span class="line"><span style="color:#24292E;">          </span><span style="color:#6A737D;"># 注意替换为你的 Gitee 目标仓库地址</span></span>
-<span class="line"><span style="color:#24292E;">          </span><span style="color:#22863A;">destination-repo</span><span style="color:#24292E;">: </span><span style="color:#032F62;">git@github.com:yimuyangshu/yimuyangshu.git</span></span></code></pre></div>`,7),e=[o];function c(t,r,E,y,i,F){return n(),a("div",null,e)}const u=s(p,[["render",c]]);export{h as __pageData,u as default};
+<span class="line"><span style="color:#24292E;">          </span><span style="color:#22863A;">destination-repo</span><span style="color:#24292E;">: </span><span style="color:#032F62;">git@github.com:yimuyangshu/yimuyangshu.git</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E;">      - </span><span style="color:#22863A;">name</span><span style="color:#24292E;">: </span><span style="color:#032F62;">设置访问秘钥</span></span>
+<span class="line"><span style="color:#24292E;">        </span><span style="color:#22863A;">run</span><span style="color:#24292E;">: </span><span style="color:#D73A49;">|</span></span>
+<span class="line"><span style="color:#032F62;">          mkdir -p ~/.ssh/</span></span>
+<span class="line"><span style="color:#032F62;">          echo &quot;\${{ secrets.PRIVATE }}&quot; &gt; ~/.ssh/id_rsa</span></span>
+<span class="line"><span style="color:#032F62;">          chmod 600 ~/.ssh/id_rsa</span></span>
+<span class="line"><span style="color:#032F62;">          ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E;">      - </span><span style="color:#22863A;">name</span><span style="color:#24292E;">: </span><span style="color:#032F62;">推送到另一个仓库,并删除master</span></span>
+<span class="line"><span style="color:#24292E;">        </span><span style="color:#22863A;">run</span><span style="color:#24292E;">: </span><span style="color:#D73A49;">|</span></span>
+<span class="line"><span style="color:#032F62;">          git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.git</span></span>
+<span class="line"><span style="color:#032F62;">          git push b-origin --delete master</span></span></code></pre></div>`,7),e=[o];function c(t,r,E,y,i,F){return n(),a("div",null,e)}const u=s(p,[["render",c]]);export{h as __pageData,u as default};
