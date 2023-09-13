@@ -18,6 +18,12 @@ jobs:
       - name: 检出仓库
         uses: actions/checkout@v2
 
+      - name: 部署dist文件夹作为独立分支到docs
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          folder: ./docs/.vitepress/dist
+          branch: docs
+
       - name: Push to master
         run: |
           git remote add origin git@github.com:yimuyangshu/yimuyangshu.git
