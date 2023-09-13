@@ -3,7 +3,6 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   // 仓库名 xxx.github.io/docs 否则js,css 404
-  base:"/docs",
   title: "Yimuyangshu",
   themeConfig: {
     nav: [
