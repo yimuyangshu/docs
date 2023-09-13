@@ -59,9 +59,3 @@ jobs:
         run: |
           git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.github.io.git
           git push b-origin --delete master
-          git checkout --orphan new_branch
-          git add -A
-          git commit -am "Initial commit"
-          git branch -D master
-          git branch -m master
-          git push -f b-origin master
