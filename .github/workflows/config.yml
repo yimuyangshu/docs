@@ -60,7 +60,7 @@ jobs:
           cd docs/.vitepress/dist
           git config --global user.email "yimuyangshu@163.com"
           git config --global user.name "yimu"
-          git remote add origin git@github.com:yimuyangshu/yimuyangshu.git
+          git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.git
           git fetch origin master
           git checkout docs
           git merge origin/master
