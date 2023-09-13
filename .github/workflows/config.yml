@@ -48,7 +48,7 @@ jobs:
           # 注意替换为你的 Gitee 目标仓库地址
           destination-repo: git@github.com:yimuyangshu/yimuyangshu.git
 
-#      - name: Push to master
-#        run: |
-#          git remote add origin git@github.com:yimuyangshu/yimuyangshu.git
-#          git push origin master
+      - name: Push to master
+        run: |
+          git remote add origin git@github.com:yimuyangshu/yimuyangshu.git
+          git push origin master
