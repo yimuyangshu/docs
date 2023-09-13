@@ -26,7 +26,7 @@ git subtree push --prefix=docs/.vitepress/dist origin docs
 
 ## githug action
 ```yaml
-name: Build and Deploy Docs
+name: 构建并部署docs
 
 on:
   push:
