@@ -61,4 +61,6 @@ jobs:
           git config --global user.email "yimuyangshu@163.com"
           git config --global user.name "yimu"
           git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.git
+          git add .
+          git commit -m 'test'
           git push -f b-origin master
