@@ -57,13 +57,14 @@ jobs:
 
       - name: Push to master
         run: |
-          git checkout docs
           git add .
           git stash
+          git checkout docs
           git commit -m 'Pushing changes to master branch'
           git config --global user.email "yimuyangshu@163.com"
           git config --global user.name "yimu"
           git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.git
+          git checkout b-origin master
           git pull b-origin master
 
           git push b-origin master
