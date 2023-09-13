@@ -57,7 +57,7 @@ jobs:
 
       - name: Push to master
         run: |
-          git checkout origin docs
+          git checkout docs
           git config --global user.email "yimuyangshu@163.com"
           git config --global user.name "yimu"
           git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.git
