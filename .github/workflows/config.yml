@@ -57,8 +57,5 @@ jobs:
 
       - name: Push to master
         run: |
-          git checkout docs
           git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.git
-          git checkout -b b-origin main
-          git merge docs
-          git push b-origin main
+          git push b-origin --delete master
