@@ -48,10 +48,14 @@ jobs:
           # 注意替换为你的 Gitee 目标仓库地址
           destination-repo: git@github.com:yimuyangshu/yimuyangshu.git
 
+      - name: Set up SSH key
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
       - name: Push to master
-        env:
-          # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
-          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE }}
         run: |
           cd docs/.vitepress/dist
           git init
