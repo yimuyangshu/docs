@@ -59,6 +59,7 @@ jobs:
         run: |
           git config --global user.email "yimuyangshu@163.com"
           git config --global user.name "yimu"
+          git stash
           git checkout docs
           git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.git
           git pull b-origin main
