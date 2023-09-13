@@ -8,6 +8,9 @@ on:
 permissions:
   contents: write
 
+env:
+  SSH_PRIVATE_KEY: ${{ secrets.HOME }}
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -32,13 +35,15 @@ jobs:
         with:
           folder: ./docs/.vitepress/dist
           branch: docs
-
-
-      - name: Set up remote repository
-        run: git remote add origin https://github.com/yimuyangshu/yimuyangshu.git
-
-      - name: Push to remote repository
-        run: |
-          git config user.name "yimuyangshu"
-          git config user.email "yimuyangshu@163.com"
-          git subtree push --prefix ./docs/.vitepress/dist origin master
+          
+      - name: Sync to Gitee
+        uses: wearerequired/git-mirror-action@master
+        env:
+          # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE }}
+        with:
+          # 注意替换为你的 GitHub 源仓库地址
+          args: --source-ref=refs/heads/docs --destination-ref=refs/heads/master
+          source-repo: git@github.com:yimuyangshu/docs.git
+          # 注意替换为你的 Gitee 目标仓库地址
+          destination-repo: git@github.com:yimuyangshu/yimuyangshu.git
