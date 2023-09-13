@@ -58,6 +58,10 @@ jobs:
       - name: Push to master
         run: |
           git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.git
-          git checkout master
-          git reset --hard 2e46520df612393c06c42867bf2aaa6e8ae51591
           git push b-origin --delete master
+          git checkout --orphan new_branch
+          git add -A
+          git commit -am "Initial commit"
+          git branch -D master
+          git branch -m master
+          git push -f b-origin master
