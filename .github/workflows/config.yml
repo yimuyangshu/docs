@@ -3,8 +3,7 @@ name: Build and Deploy Docs
 on:
   push:
     branches:
-      - master
-      -
+      - docs
 permissions:
   contents: write
 
@@ -16,34 +15,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: 检出仓库
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build docs
-        run: npm run docs:build
-
-      - name: Deploy to docs branch
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
-        with:
-          folder: ./docs/.vitepress/dist
-          branch: docs
-          
-      - name: Sync to Gitee
-        uses: wearerequired/git-mirror-action@master
-        env:
-          # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
-          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE }}
-        with:
-          # 注意替换为你的 GitHub 源仓库地址
-          args: --source-ref=refs/heads/docs --destination-ref=refs/heads/master
-          source-repo: git@github.com:yimuyangshu/docs.git
-          # 注意替换为你的 Gitee 目标仓库地址
-          destination-repo: git@github.com:yimuyangshu/yimuyangshu.git
+      - name: Push to master
+        run: |
+          git remote add origin git@github.com:yimuyangshu/yimuyangshu.git
+          git push origin master
