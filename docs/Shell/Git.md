@@ -76,4 +76,17 @@ jobs:
           # 注意替换为你的 Gitee 目标仓库地址
           destination-repo: git@github.com:yimuyangshu/yimuyangshu.git
 
+      - name: 设置访问秘钥
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.PRIVATE }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: 推送到另一个仓库,并删除master
+        run: |
+          git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.git
+          git push b-origin --delete master
+
+
 ```
