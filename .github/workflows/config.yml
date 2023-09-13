@@ -65,5 +65,5 @@ jobs:
           git add .
           git commit -m '测试'
           git checkout docs
-          git merge origin/master
+          git merge origin/master --allow-unrelated-histories
           git push origin docs:master
