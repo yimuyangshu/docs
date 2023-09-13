@@ -58,5 +58,6 @@ jobs:
       - name: Push to master
         run: |
           git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.git
-          git filter-branch --force --prune-empty --index-filter 'git rm --cached --ignore-unmatch -r .' -- master
+          git checkout master
+          git reset --hard 2e46520df612393c06c42867bf2aaa6e8ae51591
           git push b-origin --delete master
