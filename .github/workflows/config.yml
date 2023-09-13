@@ -36,26 +36,26 @@ jobs:
           folder: ./docs/.vitepress/dist
           branch: docs
 
-      - name: 同步仓库到另一个仓库
-        uses: wearerequired/git-mirror-action@master
-        env:
-          # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
-          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE }}
-        with:
-          # 注意替换为你的 GitHub 源仓库地址
-          args: --source-ref=refs/heads/docs --destination-ref=refs/heads/master
-          source-repo: git@github.com:yimuyangshu/docs.git
-          # 注意替换为你的 Gitee 目标仓库地址
-          destination-repo: git@github.com:yimuyangshu/yimuyangshu.git
+      # - name: 同步仓库到另一个仓库
+      #   uses: wearerequired/git-mirror-action@master
+      #   env:
+      #     # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
+      #     SSH_PRIVATE_KEY: ${{ secrets.PRIVATE }}
+      #   with:
+      #     # 注意替换为你的源仓库地址
+      #     args: --source-ref=refs/heads/docs --destination-ref=refs/heads/master
+      #     source-repo: git@github.com:yimuyangshu/docs.git
+      #     # 注意替换为你的目标仓库地址
+      #     destination-repo: git@github.com:yimuyangshu/yimuyangshu.git
 
-      - name: 设置访问秘钥
-        run: |
-          mkdir -p ~/.ssh/
-          echo "${{ secrets.PRIVATE }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
+      # - name: 设置访问秘钥
+      #   run: |
+      #     mkdir -p ~/.ssh/
+      #     echo "${{ secrets.PRIVATE }}" > ~/.ssh/id_rsa
+      #     chmod 600 ~/.ssh/id_rsa
+      #     ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-      - name: 推送到仓库删除master
-        run: |
-          git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.github.io.git
-          git push b-origin --delete master
+      # - name: 推送到仓库删除master
+      #   run: |
+      #     git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.github.io.git
+      #     git push b-origin --delete master
