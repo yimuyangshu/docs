@@ -66,4 +66,4 @@ jobs:
           git commit -m '测试'
           git checkout docs
           git merge -X ours b-origin/master --allow-unrelated-histories
-          git push b-origin docs:master
+          git push -f b-origin docs:master
