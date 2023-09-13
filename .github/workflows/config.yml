@@ -57,14 +57,11 @@ jobs:
 
       - name: Push to master
         run: |
-          cd docs/.vitepress/dist
+          git checkout origin docs
           git config --global user.email "yimuyangshu@163.com"
           git config --global user.name "yimu"
           git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.git
           git pull b-origin master
-#          git fetch b-origin master
-          git checkout origin docs
           git add .
-          git commit -m '测试'
-#          git merge -X ours b-origin/master --allow-unrelated-histories
-          git push b-origim master
+          git commit -m 'Pushing changes to master branch'
+          git push b-origin HEAD:master
