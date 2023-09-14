@@ -10,7 +10,7 @@ hero:
       text: Docker
       link: /Docker/docker.md
 
-features:
+# features:
 #  - title: Swoole
 #    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 #  - title: Hyperf
