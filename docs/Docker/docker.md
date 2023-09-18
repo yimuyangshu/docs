@@ -37,6 +37,8 @@ docker start/stop/restart <container-id>
 
 # 进入指定容器的终端
 docker exec -it <container-id> /bin/bash
+# 指定容器执行命令
+docker exec vitepress sh -c "cd /www && npm run docs:build"
 
 # 改变容器重启策略 / 挂载卷 / 网络设置 / 资源限制(cpu、内存)
 docker update --restart=always <container-id>
