@@ -25,11 +25,17 @@ export default defineConfig({
         items:[
           {text: 'Git',link: '/Shell/Git.md'}
         ]
+      },
+      {
+        text: 'Swoole',
+        items:[
+          {text: '并发笔记',link: '/Swoole/Notice.md'}
+        ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      // { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
   }
 })

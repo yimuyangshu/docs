@@ -15,7 +15,7 @@ systemctl enable docker.service
 -p 端口映射
 -v 目录映射
 -e 环境变量 或 容器终端键入export XXXX
--itd 后台运行交互式容器(nodejs、VPN)
+-itd 后台运行交互式容器(nodejs、VPN) 
 --name 容器名称 镜像
 --restart 自启动 no(默认)  always(总是)
 --link 容器名:容器别名  可以通过代理直接访问容器内部的端口服务(如下)
