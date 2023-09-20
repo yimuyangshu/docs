@@ -20,7 +20,6 @@ systemctl enable docker.service
 --restart 自启动 no(默认)  always(总是)
 --link 容器名:容器别名  可以通过代理直接访问容器内部的端口服务(如下)
 -e HTTP_PROXY / -e ALL_PROXY  http://容器别名:端口 
--v /etc/localtime:/etc/localtime:ro  # 时区共享(注:php-fpm的时区也需要调整)
 ```
 
 ## 常用命令
@@ -79,6 +78,16 @@ docker run -d --name swoole_8.2 -v D:\workspace:/www -p 9501:9501 -p 9502:9502 -
 ## PHP7.4 Swoole
 ```shell
 docker run -d --name swoole_7.4 -v D:\workspace:/www -p 9504:9504 -p 9505:9505 -p 9506:9506 -it hyperf/hyperf:7.4-alpine-v3.15-swoole-v4.8.11
+```
+
+## 时区设置
+```shell
+# 创建容器时设置
+-v /etc/localtime:/etc/localtime:ro  # 时区共享(注:php-fpm的时区也需要调整)
+
+# 容器里直接设置
+apk add tzdata
+ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ```
 
 
