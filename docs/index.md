@@ -9,7 +9,9 @@ hero:
     - theme: brand
       text: Docker
       link: /Docker/docker.md
-
+    - theme: brand
+      text: Git
+      link: /Shell/Git.md
 features:
 #  - title: Swoole
 #    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
