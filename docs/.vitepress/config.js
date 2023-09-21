@@ -4,9 +4,6 @@ import {defineConfig} from 'vitepress'
 export default defineConfig({
   // 仓库名 xxx.github.io/docs 否则js,css 404
   title: "Yimuyangshu",
-  head:[
-    ['link',{rel: 'stylesheet' ,href: './theme/cutsom.css',as:'style'}]
-  ],
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
