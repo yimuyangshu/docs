@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "知行合一"
+  name: "知行合一."
   tagline: Knowledge and action should go hand in hand.
   actions:
     - theme: brand
