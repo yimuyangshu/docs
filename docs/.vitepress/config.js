@@ -1,7 +1,7 @@
 import {defineConfig} from 'vitepress'
 
 export default defineConfig({
-  title: "Yimuyangshu",
+  title: "随手记",
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
