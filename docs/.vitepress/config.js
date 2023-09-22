@@ -27,7 +27,8 @@ export default defineConfig({
       {
         text: 'Swoole',
         items:[
-          {text: '并发笔记',link: '/Swoole/Notice.md'}
+          {text: '并发笔记',link: '/Swoole/Notice.md'},
+          {text: 'RabbitMQ',link: '/Swoole/RabbitMQ.md'},
         ]
       }
     ],
