@@ -3,6 +3,7 @@ import {defineConfig} from 'vitepress'
 export default defineConfig({
   title: "随手记",
   base: "docs",
+  assetsDir:"asset",
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
