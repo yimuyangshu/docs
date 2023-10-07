@@ -21,7 +21,8 @@ export default defineConfig({
       {
         text: 'System',
         items:[
-          {text: 'Git',link: '/Shell/Git.md'}
+          {text: 'Git',link: '/Shell/Git.md'},
+          {text: 'nginx',link: '/Shell/nginx.md'},
         ]
       },
       {
