@@ -23,6 +23,7 @@ export default defineConfig({
         items:[
           {text: 'Git',link: '/Shell/Git.md'},
           {text: 'nginx',link: '/Shell/nginx.md'},
+          {text: '命令行',link: '/Shell/shell.md'},
         ]
       },
       {
