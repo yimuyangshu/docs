@@ -3,7 +3,8 @@
 ```shell
     # linux
     apk add build-base # 安装 gcc
-    apk make
+    apk add make
+    apk add perl
     
     git clone https://github.com/wg/wrk.git wrk
     cd wrk
