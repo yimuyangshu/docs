@@ -1,7 +1,7 @@
 # Nginx
 
-
 ## thinkphp 伪静态
+
 ```php
 location / {
   if (!-e $request_filename) {
@@ -10,7 +10,9 @@ location / {
   }
 }
 ```
+
 ## laravel 伪静态
+
 ```php
 location / {
     try_files $uri $uri/ /index.php?$query_string;
@@ -18,7 +20,9 @@ location / {
 ```
 
 ## 伪静态只接受指定值
+
 主要用来应对tp6的多应用模式下实现短链接的效果 https://www.xxx.com/6i8GF5g7R
+
 ```shell
 location / {
   if (!-e $request_filename) {
@@ -32,7 +36,9 @@ location / {
 ```
 
 ## OPTIONS请求 伪静态 浏览器预检
+
 > 状态:307 浏览器内部将http跳转到https,修改前端代码为https(后端https)
+
 ```php
 location / {
     //... 放在最顶部
@@ -45,7 +51,9 @@ location / {
     }
 }
 ```
+
 ## 反向代理
+
 ```text
 #PROXY-START/
 location /
@@ -60,7 +68,9 @@ location /
 ```
 
 ## 负载均衡
+
 `浏览器`请求默认会触发2次,认为是网页会请求网站图标
+
 ```shell
     upstream myproject {
        server 192.168.1.151:10001 weight=1;

@@ -22,3 +22,21 @@ function httpRequest($url, $postData=[])
 }
 ```
 :::
+
+
+## 无限递归
+::: details
+```php
+function get_cate($cates,$fid = 0)
+{
+    static $classes = array();  //静态变量 让数据在递归中保持上次得到的结果
+    foreach($cates as $vo){
+        if($fid == $vo['parent_id']){
+            $classes[] = $vo;
+            get_cate($cates,$vo['cate_id']);
+        }
+    }
+    return $classes;
+}
+```
+:::

@@ -27,10 +27,11 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Swoole',
+        text: '开发相关',
         items:[
           {text: '并发笔记',link: '/Swoole/Notice.md'},
           {text: 'RabbitMQ',link: '/Swoole/RabbitMQ.md'},
+          {text: '自定义函数(PHP)',link: '/PHP/Demo.md'},
         ]
       }
     ],
