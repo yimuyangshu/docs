@@ -25,6 +25,14 @@ git commit -m '111'
 git subtree push --prefix=docs/.vitepress/dist origin docs
 ```
 
+## 获取公钥
+```shell
+ssh-keygen -t rsa -C "yimuyangshu@163.com"
+
+cat ~/.ssh/id_rsa.pub 
+```
+
+
 ## github action
 
 ```yaml
