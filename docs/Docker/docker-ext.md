@@ -67,9 +67,9 @@ vi /etc/nginx/http.d/default.conf
     docker load -i <文件名>.tar
     
     # 镜像推送到自己的仓库
-    docker tag lnmpr:1 yimuyangshu/lnmpr74:1 # 将lnmpr仓库打上自己的tag标签
+    docker tag lnmpr:1 xxxx/lnmpr74:1 # 将lnmpr仓库打上自己的tag标签
     # 推送到自己的仓库
-    docker push yimuyangshu/lnmpr74:1
+    docker push xxxx/lnmpr74:1
 ```
 
 ## 通过 clash for docker 搭建 ChatGPT

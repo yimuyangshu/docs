@@ -74,9 +74,9 @@ jobs:
         with:
           # 注意替换为你的 GitHub 源仓库地址
           args: --source-ref=refs/heads/docs --destination-ref=refs/heads/master
-          source-repo: git@github.com:yimuyangshu/docs.git
+          source-repo: git@github.com:xxxxx/docs.git
           # 注意替换为你的 Gitee 目标仓库地址
-          destination-repo: git@github.com:yimuyangshu/yimuyangshu.git
+          destination-repo: git@github.com:xxxx/xxxx.git
 
       - name: 设置访问秘钥
         run: |
@@ -87,7 +87,7 @@ jobs:
 
       - name: 推送到另一个仓库,并删除master
         run: |
-          git remote add b-origin git@github.com:yimuyangshu/yimuyangshu.git
+          git remote add b-origin git@github.com:xxxx/xxxx.git
           git push b-origin --delete master
 
 
