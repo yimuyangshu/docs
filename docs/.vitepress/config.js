@@ -3,6 +3,7 @@ import {defineConfig} from 'vitepress'
 export default defineConfig({
   title: "随手记",
   themeConfig: {
+    logo:"/world.svg",
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Docker', link: '/Docker/docker.md' }
@@ -13,6 +14,7 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Docker',
+        collapsed: true,
         items: [
           { text: 'Docker 常用', link: '/Docker/docker' },
           { text: 'Docker 扩展', link: '/Docker/docker-ext' }
@@ -20,6 +22,7 @@ export default defineConfig({
       },
       {
         text: 'System',
+        collapsed: true,
         items:[
           {text: 'Git',link: '/Shell/Git.md'},
           {text: 'nginx',link: '/Shell/nginx.md'},
@@ -28,6 +31,7 @@ export default defineConfig({
       },
       {
         text: '开发相关',
+        collapsed: true,
         items:[
           {text: '并发笔记',link: '/Swoole/Notice.md'},
           {text: 'RabbitMQ',link: '/Swoole/RabbitMQ.md'},
