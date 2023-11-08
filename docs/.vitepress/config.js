@@ -21,6 +21,13 @@ export default defineConfig({
         ]
       },
       {
+        text: '前端',
+        collapsed: true,
+        items: [
+          { text: '常用 CSS', link: '/Front/css' },
+        ]
+      },
+      {
         text: 'System',
         collapsed: true,
         items:[
