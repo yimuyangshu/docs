@@ -36,6 +36,7 @@ line-height:1.5;                                    /* 行高 */
 letter-spacing:1px;                                 /* 字间距 */
 text-indent:20px;                                   /* 文本缩进 */
 writing-mode: vertical-rl;                          /* 竖排显示 */
+user-select: none;                                  /* 禁止文本被选中 */
 ```
 
 ```css [超出省略]
