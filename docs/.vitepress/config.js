@@ -25,6 +25,8 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: '常用 CSS', link: '/Front/css' },
+          { text: '常用 JavaScript', link: '/Front/Javascript' },
+          { text: 'JS Function', link: '/Front/JsFunction' },
         ]
       },
       {
