@@ -21,7 +21,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '前端',
+        text: '前端技术',
         collapsed: true,
         items: [
           { text: '常用 CSS', link: '/Front/css' },
@@ -43,6 +43,7 @@ export default defineConfig({
           {text: '并发笔记',link: '/Swoole/Notice.md'},
           {text: 'RabbitMQ',link: '/Swoole/RabbitMQ.md'},
           {text: '自定义函数(PHP)',link: '/PHP/Demo.md'},
+          {text: 'Mysql 函数',link: '/Mysql/function'},
         ]
       }
     ],

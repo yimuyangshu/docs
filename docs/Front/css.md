@@ -35,6 +35,7 @@ transform:uppercase|lowercase|capitalize;           /* 大写|小写|首字母�
 line-height:1.5;                                    /* 行高 */
 letter-spacing:1px;                                 /* 字间距 */
 text-indent:20px;                                   /* 文本缩进 */
+writing-mode: vertical-rl;                          /* 竖排显示 */
 ```
 
 ```css [超出省略]
@@ -74,4 +75,13 @@ bottom: 60px;
 ## 背景色渐变
 ```css
 background-image: linear-gradient(#F9C22A,#B86B16)
+```
+
+### 抖音小程序中宽度随内容长度变化(标签)
+```css
+	element {
+		width: fit-content;
+		width: -moz-fit-content;
+		width: -webkit-fit-content;
+	}
 ```
