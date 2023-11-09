@@ -1,5 +1,6 @@
 # JavaScript 自定义函数
 ## 判断用户是否在浏览当前页面
+:::details
 ```javascript
 var hiddenProperty = 'hidden' in document ? 'hidden' :
     'webkitHidden' in document ? 'webkitHidden' :
@@ -15,8 +16,10 @@ var onVisibilityChange = function(){
 }
 document.addEventListener(visibilityChangeEvent, onVisibilityChange);
 ```
+:::
 
 ## 获取url的param参数
+:::details
 ```javascript
 function getUrlParam(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
@@ -25,6 +28,7 @@ function getUrlParam(name) {
     return null;
 }
 ```
+:::
 
 ## 拖拽效果
 ::: details
