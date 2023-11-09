@@ -96,8 +96,8 @@ background-image: linear-gradient(#F9C22A,#B86B16)
 
 
 ## Electron
-### 最小最大关闭等按钮失效解决
-```css
+:::code-group
+```css [最小最大关闭按钮失效]
 .custom-titlebar {
   -webkit-app-region: drag; /* 标题栏允许拖动整个窗口 */
 }
@@ -106,6 +106,11 @@ background-image: linear-gradient(#F9C22A,#B86B16)
   -webkit-app-region: no-drag; /* 给操作按钮设置禁止拖动 */
 }
 ```
+
+```text [换机器功能有问题]
+静态文件加上版本号，防止老机器缓存不加载
+```
+:::
 
 ### 滚动条
 ```css
