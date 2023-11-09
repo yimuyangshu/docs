@@ -112,7 +112,7 @@ background-image: linear-gradient(#F9C22A,#B86B16)
 ```
 :::
 
-### 滚动条
+## 滚动条
 ```css
 /*整个滚动条*/
 ::-webkit-scrollbar {
