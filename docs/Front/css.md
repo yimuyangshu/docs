@@ -68,7 +68,8 @@ word-break: break-all;  /* 允许单词内换行 */
 
 ## 选择器:伪类
 ```css
-.item:not(:last-child){}        /* 排除最后一个子元素 */
+.item:not(:last-child){}                /* 排除最后一个子元素 */
+.item-line:not(:last-child)::after{}    /* 选定除了最后一个元素的内容之后插入 */
 
 ```
 
@@ -91,4 +92,36 @@ background-image: linear-gradient(#F9C22A,#B86B16)
 		width: -moz-fit-content;
 		width: -webkit-fit-content;
 	}
+```
+
+
+## Electron
+### 最小最大关闭等按钮失效解决
+```css
+.custom-titlebar {
+  -webkit-app-region: drag; /* 标题栏允许拖动整个窗口 */
+}
+
+.custom-button {
+  -webkit-app-region: no-drag; /* 给操作按钮设置禁止拖动 */
+}
+```
+
+### 滚动条
+```css
+/*整个滚动条*/
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #dcdcdc;
+    border-radius: 4px;
+}
+/*滑块*/
+::-webkit-scrollbar-thumb{
+    background-color: #2678FF;
+    border-radius: 4px;
+}
+/*滑块hover*/
+::-webkit-scrollbar-thumb:hover {
+    background: #2678FF;
+}
 ```
