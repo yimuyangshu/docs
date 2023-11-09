@@ -66,6 +66,12 @@ word-break: break-all;  /* 允许单词内换行 */
 ```
 :::
 
+## 选择器:伪类
+```css
+.item:not(:last-child){}        /* 排除最后一个子元素 */
+
+```
+
 
 ## 元素吸底
 ```css
