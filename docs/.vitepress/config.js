@@ -27,6 +27,7 @@ export default defineConfig({
           { text: '常用 CSS', link: '/Front/css' },
           { text: '常用 JavaScript', link: '/Front/Javascript' },
           { text: 'JS Function', link: '/Front/JsFunction' },
+          { text: '常用 Vue', link: '/Front/Vue' },
         ]
       },
       {
