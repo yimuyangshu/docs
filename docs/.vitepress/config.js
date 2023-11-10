@@ -28,6 +28,7 @@ export default defineConfig({
           { text: '常用 JavaScript', link: '/Front/Javascript' },
           { text: 'JS Function', link: '/Front/JsFunction' },
           { text: '常用 Vue', link: '/Front/Vue' },
+          { text: '常用 HTML', link: '/Front/html' },
         ]
       },
       {
@@ -46,6 +47,7 @@ export default defineConfig({
           {text: '并发笔记',link: '/Swoole/Notice.md'},
           {text: 'RabbitMQ',link: '/Swoole/RabbitMQ.md'},
           {text: '自定义函数(PHP)',link: '/PHP/Demo.md'},
+          {text: '常用 PHP',link: '/PHP/nomral.md'},
           {text: 'Mysql 函数',link: '/Mysql/function'},
         ]
       }
