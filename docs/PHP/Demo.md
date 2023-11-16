@@ -40,3 +40,37 @@ function get_cate($cates,$fid = 0)
 }
 ```
 :::
+
+## 阿拉伯数字换汉字
+:::details
+```php
+public function convertToChinese($number) {
+    $chineseNumber = '';
+    $chineseDigits = array('零', '一', '二', '三', '四', '五', '六', '七', '八', '九');
+    $chineseUnits = array('', '十', '百', '千', '万', '亿');
+
+    if ($number == 0) {
+        return $chineseDigits[0];
+    }
+
+    $numberStr = strval($number);
+    $length = strlen($numberStr);
+
+    for ($i = 0; $i < $length; $i++) {
+        $digit = intval($numberStr[$i]);
+        $unit = $length - $i - 1;
+
+        if ($digit != 0) {
+            $chineseNumber .= $chineseDigits[$digit] . $chineseUnits[$unit];
+        } else {
+            // 处理连续的零，只保留一个零
+            if ($i < $length - 1 && $numberStr[$i + 1] != '0') {
+                $chineseNumber .= $chineseDigits[$digit];
+            }
+        }
+    }
+
+    return $chineseNumber;
+}
+```
+:::
