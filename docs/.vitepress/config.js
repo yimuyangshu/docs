@@ -2,6 +2,7 @@ import {defineConfig} from 'vitepress'
 
 export default defineConfig({
   title: "随手记",
+  editLink: false,
   themeConfig: {
     logo:"/world.svg",
     nav: [
@@ -28,6 +29,7 @@ export default defineConfig({
           { text: '常用 JavaScript', link: '/Front/Javascript' },
           { text: 'JS Function', link: '/Front/JsFunction' },
           { text: '常用 Vue', link: '/Front/Vue' },
+          { text: '常用 Vue3', link: '/Front/Vue3/Vue3-1' },
           { text: '常用 HTML', link: '/Front/html' },
         ]
       },
@@ -50,6 +52,12 @@ export default defineConfig({
           {text: '常用 PHP',link: '/PHP/nomral.md'},
           {text: 'Mysql 函数',link: '/Mysql/function'},
         ]
+      },
+      {
+        text: 'Java'
+      },
+      {
+        text: 'Kotlin'
       }
     ],
 
