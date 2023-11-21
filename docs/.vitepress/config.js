@@ -7,7 +7,8 @@ export default defineConfig({
     logo:"/world.svg",
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Docker', link: '/Docker/docker.md' }
+      { text: 'Docker', link: '/Docker/docker.md' },
+      { text: 'Vue', link: '/Front/vue.md' }
     ],
     search: {
       provider: 'local'
@@ -29,7 +30,6 @@ export default defineConfig({
           { text: '常用 JavaScript', link: '/Front/Javascript' },
           { text: 'JS Function', link: '/Front/JsFunction' },
           { text: '常用 Vue', link: '/Front/Vue' },
-          { text: '常用 Vue3', link: '/Front/Vue3/Vue3-1' },
           { text: '常用 HTML', link: '/Front/html' },
         ]
       },
