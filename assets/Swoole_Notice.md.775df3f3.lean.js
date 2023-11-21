@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as t,Q as o}from"./chunks/framework.01af844e.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"Swoole/Notice.md","filePath":"Swoole/Notice.md"}'),s={name:"Swoole/Notice.md"},c=o("",3),n=[c];function l(i,r,p,d,_,h){return a(),t("div",null,n)}const m=e(s,[["render",l]]);export{u as __pageData,m as default};

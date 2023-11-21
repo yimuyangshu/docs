@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.01af844e.js";const h=JSON.parse('{"title":"常用命令行","description":"","frontmatter":{},"headers":[],"relativePath":"Shell/shell.md","filePath":"Shell/shell.md"}'),p={name:"Shell/shell.md"},o=l("",13),t=[o];function e(r,c,y,E,d,i){return a(),n("div",null,t)}const u=s(p,[["render",e]]);export{h as __pageData,u as default};

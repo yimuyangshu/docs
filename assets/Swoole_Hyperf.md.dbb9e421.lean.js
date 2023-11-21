@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,Q as e}from"./chunks/framework.01af844e.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"Swoole/Hyperf.md","filePath":"Swoole/Hyperf.md"}'),o={name:"Swoole/Hyperf.md"},p=e("",2),l=[p];function t(r,c,i,y,d,_){return a(),n("div",null,l)}const E=s(o,[["render",t]]);export{u as __pageData,E as default};
